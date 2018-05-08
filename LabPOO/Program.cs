@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LabPOO
 {
-    class Program
+    public class Program
     {
         public static List<Product> cart;
         public static List<Product> market;
@@ -93,6 +93,7 @@ namespace LabPOO
                         continue;
                     }
                     AddToCart(market[answer]);
+                    Checkear(cart, answer);
                     break;
                 }
                 catch
@@ -190,6 +191,222 @@ namespace LabPOO
             {
                 response = Console.ReadKey(true);
             }
+
+            
+        }
+
+
+
+
+        public delegate void BigSistersEventHandler(List<Product> carro, int answer);
+
+        public static event BigSistersEventHandler BigSisters;
+
+        protected static void OnBigSisters(List<Product> carro, int answer)
+        {
+            Console.WriteLine("Este elemento no puede ser agregado");
+            int carro1 = carro.Count();
+            carro.RemoveAt(carro1 - 1);
+        }
+        public void Suscribir()
+        {
+            BigSisters += new BigSistersEventHandler(OnBigSisters);
+        }
+
+        public static void Checkear(List<Product> carro, int answer)
+        {
+            if (answer == 1)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 3)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 5)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 7)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 9)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 10)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 11)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 15)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 20)
+            {
+                BigSisters(carro, answer);
+            }
+            else if (answer == 1)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+            else if (answer == 2)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 3)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+            else if (answer == 4)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 3)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+            else if (answer == 6)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 3)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+            else if (answer == 8)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 13)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+            else if (answer == 10)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 13)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 14)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 17)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 3)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 18)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 19)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 20)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
+            else if (answer == 22)
+            {
+                int carro1 = carro.Count();
+                if (carro1 < 2)
+                { }
+                else
+                {
+                    BigSisters(carro, answer);
+                }
+
+            }
+
         }
     }
+
+
+    
+    
+    
 }
